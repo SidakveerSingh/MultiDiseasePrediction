@@ -69,7 +69,7 @@ function Heart() {
         }
       });
 
-      const response = await fetch('http://localhost:5000/predict-heart', {
+      const response = await fetch('http://localhost:5000/api/heart/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -187,7 +187,7 @@ function Lung() {
     const formData = new FormData();
     formData.append('image', file);
     try {
-      const response = await fetch('http://localhost:5000/predict-lung', {
+      const response = await fetch('http://localhost:5000/api/lung/predict', {
         method: 'POST',
         body: formData
       });
